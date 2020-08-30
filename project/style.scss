@@ -1,0 +1,375 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    color: white;
+}
+
+html{
+  background-color: black;
+}
+
+button{
+  border-color: #b3b3cc;
+  color: #1a1a1a;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 0 40px 40px #b3b3cc inset, 0 0 0 0 #b3b3cc;
+    &:hover{
+      box-shadow: 0 0 10px 0 #b3b3cc inset, 0 0 10px 4px #b3b3cc;
+      color: #002db3;
+    }
+  }
+
+option{
+  background-color: black;
+  color: white;
+  overflow-y: hidden;
+}
+
+// header
+header{
+  padding-bottom: 40px;
+  margin-top: 20px;
+  background-color: black;
+  nav{
+    // margin-top: 20px;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: block ruby;
+    a{
+      margin-right: 10px;
+      margin-left: 10px;
+      text-decoration: none;
+      &:hover{
+        color: red;
+      }
+    }
+    button{
+      margin-right: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+// all movies
+.sorting{
+  padding-bottom: 20px;
+  width: 100%;
+  line-height: 17px;
+  background-color: black;
+  display: flex;
+  h4{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  h4:first-child{
+    margin-left: 40%;
+  }
+  select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  }
+  a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    &:hover{
+      color: red;
+    }
+  }
+}
+
+.filterErrors{
+  color: red;
+  width: 100%;
+  display: block ruby;
+  text-align: center;
+}
+
+.moviesWrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-auto-rows: minmax(280px, auto);
+  background-color: black;
+  font-family: 'Special Elite', cursive;
+  font-weight: 400;
+  padding-left: 50px;
+  padding-right: 50px;
+  .userBtn{
+  border-color: #b3b3cc;
+  color: #1a1a1a;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 0 40px 40px #b3b3cc inset, 0 0 0 0 #b3b3cc;
+    &:hover{
+      box-shadow: 0 0 10px 0 #b3b3cc inset, 0 0 10px 4px #b3b3cc;
+      color: #002db3;
+    }
+  }
+  .allMovies{
+    text-align: center;
+    line-height: 40px;
+  }
+  .imgDiv{
+    height: 100%;
+    width: 50%;
+    float: left;
+  }
+  .descriptionDiv{
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: #1a1a1a;
+    min-height: 280px;
+  }
+  h6{
+    font-size: 16px;
+     color: #b3b3cc;
+  }
+  h6:first-child{
+    margin-top: 20px;
+  }
+  span{
+    padding-right: 10px;
+  }
+  img{
+    height: 280px;
+    width: 100%;
+  }
+}
+
+// movies by user
+.username{
+  background-color: black;
+  color: white;
+  margin-bottom: 25px;
+  h2{
+    margin-left: 50px;
+  }
+}
+
+.logIn, .signUp{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  form{
+    display: grid;
+  }
+  input{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid white;
+  }
+  P{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: red;
+  }
+  button{
+    background-color: black;
+    height: 30px;
+    width: 70px;
+  }
+}
+
+// update
+.updateForm{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  form{
+    display: grid;
+  }
+  input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid white;
+  }
+  P{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+  }
+  button{
+    background-color: black;
+    height: 30px;
+    width: 70px;
+  }
+}
+
+// myMovies
+a{
+  text-decoration: none;
+}
+button{
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sorting{
+    h4:first-child{
+      margin-left: 20%;
+    }
+  }
+  .moviesWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-rows: minmax(220px, auto);
+    .allMovies{
+      line-height: 30px;
+    }
+    img{
+      height: 220px;
+    }
+    .imgDiv{
+      height: 100%;
+      width: 40%;
+      float: left;
+    }
+    .descriptionDiv{
+      float: right;
+      width: 60%;
+      height: 100%;
+      min-height: 220px;
+    }
+    h6{
+      font-size: 20px;
+    }
+    h6:first-child{
+      margin-top: 20px;
+    }
+    button{
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sorting{
+    h4:first-child{
+      margin-left: 20%;
+    }
+  }
+  .moviesWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-rows: minmax(180px, auto);
+    .allMovies{
+      line-height: 25px;
+    }
+    img{
+      height: 180px
+    }
+    .imgDiv{
+      height: 100%;
+      width: 40%;
+      float: left;
+    }
+    .descriptionDiv{
+      float: right;
+      width: 60%;
+      height: 100%;
+      min-height: 180px;
+    }
+    h6{
+      font-size: 15px;
+    }
+    h6:first-child{
+      margin-top: 20px;
+    }
+    button{
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header{
+    display: grid;
+    nav{
+      display: grid;
+      text-align: center;
+      a{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .sorting{
+    display: grid;
+    line-height: 45px;
+    text-align: center;
+    h4{
+      margin-left: 10%;
+    }
+    h4:first-child{
+      margin-left: 1px;
+    }
+  }
+
+  .moviesWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-rows: minmax(120px, auto);
+    padding-left: 10px;
+    padding-right: 10px;
+    .allMovies{
+      line-height: 20px;
+    }
+    img{
+      height: 120px
+    }
+    .imgDiv{
+      height: 100%;
+      width: 30%;
+      float: left;
+    }
+    .descriptionDiv{
+      float: right;
+      width: 70%;
+      height: 100%;
+      min-height: 120px;
+    }
+    h6{
+      font-size: 15px;
+    }
+    h6:first-child{
+      margin-top: 10px;
+    }
+    button{
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+}
