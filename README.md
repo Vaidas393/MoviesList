@@ -22,4 +22,4 @@
  18.	Not to use get method and not to show any data in url:
  19.	Add at least one filter for data
 
-https://vpmovies.000webhostapp.com/index.php
+https://vppmovies.000webhostapp.com/
